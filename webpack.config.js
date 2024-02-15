@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin"); // Adicionando o plugin de minificação JavaScript
 const path = require("path");
 
 module.exports = {
@@ -15,7 +16,7 @@ module.exports = {
             test: /\.css$/,
             use: [
                 MiniCssExtractPlugin.loader,
-                'css-loader' // Não é necessário definir minimize aqui
+                'css-loader'
             ]
         }]
     },
@@ -27,10 +28,16 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [{ from: "./css", to: "css" }]
         }),
-        new OptimizeCssAssetsPlugin() // Adiciona o plugin para otimizar os arquivos CSS
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new CssMinimizerPlugin(),
+            new TerserPlugin()
+        ],
+    },
     output: {
         path: path.resolve(__dirname, "public"),
         filename: "[name].bundle.min.js"
-    }
+    },
 };
