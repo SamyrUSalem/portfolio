@@ -28,7 +28,7 @@
 
         <div class="aside">
             <div class="logo">
-                <a href="#"><span>A</span>tlas</a>
+                <a href="#"><span>S</span>amyr</a>
             </div>
             <div class="nav-toggler">
                 <span></span>
@@ -425,10 +425,13 @@
                     <h4 class="contact-sub-title padd-15">Vou Mostrar os Serviços</h4>
                     <div class="row">
                         <!--Contact Info item Start-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Celular</h4>
-                            <p>(92) 98201-0017</p>
+                        <div id="wpp" class="contact-info-item padd-15">
+                            <a href="https://api.whatsapp.com/send/?phone=555592982010017&text&type=phone_number&app_absent=0"
+                                target="_blank">
+                                <div class="icon"><i class="fa fa-phone"></i></div>
+                                <h4>Celular/Wpp</h4>
+                                <p>(92) 98201-0017</p>
+                            </a>
                         </div>
                         <!--Contact Info item End-->
                         <!--Contact Info item Start-->
@@ -496,6 +499,12 @@
                         </form>
                     </div>
                 </div>
+                <div class="popup">
+                    <img src="./images/check.png" alt="Enviado!">
+                    <h2>Obrigado!</h2>
+                    <p>O email foi enviado com sucesso!</p>
+                    <button type="button">Ok!</button>
+                </div>
             </section>
             <!--Contact Section End-->
         </div>
@@ -512,23 +521,23 @@
         </div>
         <h4>Temas</h4>
         <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+            <span class="color-1" data-color="color-1"></span>
+            <span class="color-2" data-color="color-2"></span>
+            <span class="color-3" data-color="color-3"></span>
+            <span class="color-4" data-color="color-4"></span>
+            <span class="color-5" data-color="color-5"></span>
         </div>
-    </div>
-    <!--Style Switcher End-->
-    <!--Js Files-->
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script src="./public/email.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
-        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./public/main.bundle.min.js"></script>
-    <script src="./public/styleSwitcher.bundle.min.js"></script>
+        <!--Style Switcher End-->
+        <!--Js Files-->
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script src="./src/email.js"></script>
+        <!-- <script src="./public/email.bundle.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+            integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./public/main.bundle.min.js"></script>
+        <script src="./public/styleSwitcher.bundle.min.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,9 @@ document.querySelector(".contact-form").addEventListener("submit", (event) => {
     const nameIn = document.getElementById("name"),
         emailIn = document.getElementById("email"),
         subjectIn = document.getElementById("subject"),
-        messageIn = document.getElementById("message");
+        messageIn = document.getElementById("message"),
+        popup = document.querySelector(".popup")
+
 
     const name = nameIn.value,
         email = emailIn.value,
@@ -29,10 +31,18 @@ document.querySelector(".contact-form").addEventListener("submit", (event) => {
             emailIn.value = ""
             subjectIn.value = ""
             messageIn.value = ""
-            window.location.href = "../thanks.html"
+            popup.classList.add("open-popup")
         }
         );
     }
+})
+
+const closeBtn = document.querySelector(".popup > button"),
+    popup = document.querySelector(".popup");
+
+
+closeBtn.addEventListener("click", () => {
+    popup.classList.remove("open-popup")
 })
 
 

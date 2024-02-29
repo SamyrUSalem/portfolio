@@ -10,10 +10,14 @@
     border-radius: 5px;
     transition: all 0.3s ease;
     transform: translateX(100%);
+    cursor: pointer !important;
+
 }
 
 .style-switcher.open {
     transform: translateX(-25px);
+    cursor: pointer !important;
+
 }
 
 .style-switcher .s-icon {
@@ -30,6 +34,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 50%;
+
 }
 
 .style-switcher .s-icon i {
@@ -50,15 +55,16 @@
     font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
+    cursor: default;
 }
 
 .style-switcher .colors {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .style-switcher .colors span {
+    cursor: pointer !important;
     display: inline-block;
     height: 30px;
     width: 30px;
