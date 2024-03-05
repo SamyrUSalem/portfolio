@@ -75,7 +75,7 @@
                         <div class="about-content padd-15">
                             <div class="row">
                                 <div class="about-text padd-15">
-                                    <h3>Eu Samyr E <span>Web Developer</span></h3>
+                                    <h3>Samyr E <span>Desenvolvimento Web</span></h3>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sapiente
                                         voluptate
                                         repellat quia inventore, ipsa temporibus cum ab exercitationem minima,
@@ -96,7 +96,7 @@
                                             <p>Website : <span>www.domain.com</span></p>
                                         </div>
                                         <div class="info-item  padd-15">
-                                            <p>Email : <span>samyruchoasalem@gmail.com</span></p>
+                                            <p>Nacionalidade : <span>Brasileiro</span></p>
                                         </div>
                                         <div class="info-item  padd-15">
                                             <p>Grau : <span>Developer Junior</span></p>
@@ -127,6 +127,13 @@
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
+                                            <h5>TypeScript</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 86%;"></div>
+                                                <div class="skill-percent">86%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
                                             <h5>REACT</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width: 66%;"></div>
@@ -141,6 +148,13 @@
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
+                                            <h5>CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 96%;"></div>
+                                                <div class="skill-percent">96%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
                                             <h5>BOOTSTRAP</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width: 96%;"></div>
@@ -148,9 +162,9 @@
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <h5>MONGODB</h5>
+                                            <h5>MongoDB</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 96%;"></div>
+                                                <div class="progress-in" style="width: 66%;"></div>
                                                 <div class="skill-percent">76%</div>
                                             </div>
                                         </div>
@@ -422,13 +436,16 @@
                         </div>
                     </div>
                     <h3 class="contact-title padd-15">Possui Alguma Pergunta ?</h3>
-                    <h4 class="contact-sub-title padd-15">Vou Mostrar os Serviços</h4>
+                    <h4 class="contact-sub-title padd-15">Envie uma Mensagem!</h4>
                     <div class="row">
                         <!--Contact Info item Start-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Celular</h4>
-                            <p>(92) 98201-0017</p>
+                        <div id="wpp" class="contact-info-item padd-15">
+                            <a href="https://api.whatsapp.com/send/?phone=555592982010017&text&type=phone_number&app_absent=0"
+                                target="_blank">
+                                <div class="icon"><i class="fa fa-phone"></i></div>
+                                <h4>Celular/Wpp</h4>
+                                <p>(92) 98201-0017</p>
+                            </a>
                         </div>
                         <!--Contact Info item End-->
                         <!--Contact Info item Start-->
@@ -454,7 +471,7 @@
                         <!--Contact Info item End-->
                     </div>
                     <h3 class="contact-title padd-15">Envie Um Email</h3>
-                    <h4 class="contact-sub-title padd-15">Respondo Rapidamente</h4>
+                    <h4 class="contact-sub-title padd-15">Respondo Rapidamente!</h4>
                     <!--Contact Form-->
                     <div class="row">
                         <form class="contact-form padd-15">
@@ -496,6 +513,12 @@
                         </form>
                     </div>
                 </div>
+                <div class="popup">
+                    <img src="./images/check.png" alt="Enviado!">
+                    <h2>Obrigado!</h2>
+                    <p>O email foi enviado com sucesso!</p>
+                    <button style="cursor: pointer;" class="btn" type="button">Ok!</button>
+                </div>
             </section>
             <!--Contact Section End-->
         </div>
@@ -512,23 +535,22 @@
         </div>
         <h4>Temas</h4>
         <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+            <span class="color-1" data-color="color-1"></span>
+            <span class="color-2" data-color="color-2"></span>
+            <span class="color-3" data-color="color-3"></span>
+            <span class="color-4" data-color="color-4"></span>
+            <span class="color-5" data-color="color-5"></span>
         </div>
-    </div>
-    <!--Style Switcher End-->
-    <!--Js Files-->
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script src="./public/email.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
-        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./public/main.bundle.min.js"></script>
-    <script src="./public/styleSwitcher.bundle.min.js"></script>
+        <!--Style Switcher End-->
+        <!--Js Files-->
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script src="./public/email.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+            integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./public/main.bundle.min.js"></script>
+        <script src="./public/styleSwitcher.bundle.min.js"></script>
 </body>
 
 </html>
