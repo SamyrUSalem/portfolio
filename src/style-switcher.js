@@ -13,35 +13,26 @@ window.addEventListener("scroll", () => {
 })
 
 //Theme Colors
-document.addEventListener("DOMContentLoaded", function () {
-    const colors = document.querySelectorAll(".colors span");
-
-    colors.forEach(color => {
-        color.addEventListener("click", function () {
-            setActiveStyle(color.classList[0]); // Passa a primeira classe do elemento como parâmetro
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const colors = document.querySelectorAll(".colors span");
-
-    colors.forEach(color => {
-        color.addEventListener("click", function () {
-            const selectedColor = color.getAttribute("data-color");
-            console.log(selectedColor)
-            alternateStyles.forEach(style => {
-                if (selectedColor === style.getAttribute("title")) {
-                    style.removeAttribute("disabled");
-                } else {
-                    style.setAttribute("disabled", "true");
-                }
-            });
-        });
-    });
-});
-
 const alternateStyles = document.querySelectorAll(".alternate-style");
+const colors = document.querySelectorAll(".colors span");
+
+function setActiveStyle(color) {
+    alternateStyles.forEach((style) => {
+        if (color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+        } else {
+            style.setAttribute("disabled", "true");
+        }
+    });
+}
+
+colors.forEach((color) => {
+    color.addEventListener("click", function () {
+        const selectedColor = color.getAttribute("data-color");
+        console.log(selectedColor);
+        setActiveStyle(selectedColor);
+    });
+});
 
 //Theme Light And Dark Mode
 const dayNight = document.querySelector(".day-night")
